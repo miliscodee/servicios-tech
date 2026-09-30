@@ -1,18 +1,16 @@
-import './globals.css';
 import Header from '../components/Header';
-export const metadata = {
-  title: 'Fundación Mixhue A.C.',
-  description: 'Sitio web oficial de Fundación Mixhue A.C.',
-};
+import Footer from '../components/Footer';
+import './globals.css';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="min-h-screen bg-[#07182D] text-white antialiased">
+      <body className="bg-[#07182D] text-white min-h-screen flex flex-col m-0">
         <Header />
-        <div className="pt-20">
+        <main className="flex-grow pt-24 sm:pt-28 px-4 sm:px-8 max-w-7xl mx-auto w-full">
           {children}
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );

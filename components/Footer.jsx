@@ -1,115 +1,28 @@
+import React from 'react';
+import Link from 'next/link';
+
 export default function Footer() {
   return (
-    <footer className="bg-[#040F1D] text-white border-t border-white/10">
-
-      <div className="max-w-7xl mx-auto px-8 py-16">
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-          {/* Fundación */}
-          <div>
-            <h3 className="text-xl font-semibold">
-              Fundación Mixhue A.C.
-            </h3>
-
-            <p className="text-white/50 mt-4 leading-relaxed">
-              Trabajamos para generar oportunidades y bienestar
-              para personas y comunidades en situación de vulnerabilidad.
-            </p>
-          </div>
-
-
-          {/* Navegación */}
-          <div>
-            <h4 className="text-[#C8A24C] font-semibold mb-5">
-              Explora
-            </h4>
-
-            <div className="flex flex-col gap-3 text-white/60">
-
-              <a href="/" className="hover:text-white transition">
-                Inicio
-              </a>
-
-              <a href="/nosotros" className="hover:text-white transition">
-                Nosotros
-              </a>
-
-              <a href="/programas" className="hover:text-white transition">
-                Programas
-              </a>
-
-              <a
-                href="/voluntariado"
-                className="hover:text-white transition"
-              >
-                Voluntariado
-              </a>
-
-              <a href="/contacto" className="hover:text-white transition">
-                Contacto
-              </a>
-
-            </div>
-          </div>
-
-
-          {/* Participa */}
-          <div>
-            <h4 className="text-[#C8A24C] font-semibold mb-5">
-              Participa
-            </h4>
-
-            <div className="flex flex-col gap-3 text-white/60">
-
-              <a href="/donar" className="hover:text-white transition">
-                Donar
-              </a>
-
-              <a
-                href="/voluntariado"
-                className="hover:text-white transition"
-              >
-                Sé voluntario
-              </a>
-
-            </div>
-          </div>
-
-          
-
+    <footer className="bg-[#07182D] text-white py-6 border-t border-white/10 mt-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        
+        {/* Derechos reservados */}
+        <div className="text-xs text-white/70 font-['Open_Sans']">
+          <p>© {new Date().getFullYear()} Fundación Mixhue A.C. Todos los derechos reservados.</p>
         </div>
 
-
-        {/* Línea inferior */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between gap-4">
-
-          <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Fundación Mixhue A.C. Todos los derechos reservados.
-          </p>
-
-          <div className="flex gap-6 text-white/40 text-sm">
-
-            <a
-              href="/privacidad"
-              className="hover:text-white transition"
-            >
-              Aviso de privacidad
-            </a>
-
-            <a
-              href="/terminosycondiciones"
-              className="hover:text-white transition"
-            >
-              Términos y condiciones
-            </a>
-
-          </div>
-
+        {/* Enlaces Legales: TyC y Aviso de Privacidad */}
+        <div className="flex items-center gap-6 text-xs text-white/80 font-medium">
+          <Link href="/terminos" className="hover:text-[#C8A24C] transition-colors">
+            Términos y Condiciones
+          </Link>
+          <span className="text-white/30">|</span>
+          <Link href="/privacidad" className="hover:text-[#C8A24C] transition-colors">
+            Aviso de Privacidad
+          </Link>
         </div>
 
       </div>
-
     </footer>
   );
 }
