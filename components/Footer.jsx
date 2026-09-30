@@ -22,7 +22,7 @@ export default function Footer() {
         {/* Enlaces Legales */}
         <div className="flex flex-wrap justify-center items-center gap-6 text-sm font-semibold font-['Open_Sans']">
           <Link 
-            href="/terminos" 
+            href="/terminosycondiciones" 
             className="text-slate-200 hover:text-[#C8A24C] transition-all duration-200 hover:underline underline-offset-4"
           >
             Términos y Condiciones
