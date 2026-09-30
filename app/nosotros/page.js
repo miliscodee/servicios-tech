@@ -142,23 +142,19 @@ export default function Nosotros() {
             {[
               {
                 name: "Mtra. Ana Guadalupe Ballinas Aguilar",
-                role: "Fundadora",
-                description: "Impulsora principal del proyecto y compromiso social desde 2014.",
-              },
-              {
-                name: "Milagros Ramírez Ballinas",
-                role: "Coordinación de Desarrollo",
-                description: "Gestión de plataformas digitales e iniciativas tecnológicas.",
-              },
-              {
-                name: "Nombre de integrante",
                 role: "Cargo / Área",
-                description: "Descripción breve de la responsabilidad o contribución en la fundación.",
               },
               {
-                name: "Nombre de integrante",
+                name: "Reyna Remedios Ballinas Aguilar",
                 role: "Cargo / Área",
-                description: "Descripción breve de la responsabilidad o contribución en la fundación.",
+              },
+              {
+                name: "Rocío Flores Ballinas",
+                role: "Cargo / Área",
+              },
+              {
+                name: "Josefina Delgado",
+                role: "Cargo / Área",
               },
             ].map((member, idx) => (
               <div
@@ -169,9 +165,8 @@ export default function Nosotros() {
                   <div className="w-12 h-12 rounded-full bg-[#C8A24C]/20 border border-[#C8A24C] flex items-center justify-center mb-6 text-[#C8A24C] font-bold text-lg">
                     {member.name.charAt(0)}
                   </div>
-                  <h3 className="text-xl font-semibold mb-1 text-white">{member.name}</h3>
-                  <p className="text-[#C8A24C] text-sm font-medium mb-3">{member.role}</p>
-                  <p className="text-white/70 text-sm leading-relaxed">{member.description}</p>
+                  <h3 className="text-lg font-semibold mb-2 text-white leading-snug">{member.name}</h3>
+                  <p className="text-[#C8A24C] text-sm font-medium">{member.role}</p>
                 </div>
               </div>
             ))}
