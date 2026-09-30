@@ -126,6 +126,60 @@ export default function Nosotros() {
       </section>
 
 
+      {/* NUESTRO EQUIPO */}
+      <section className="relative py-20 bg-[#0B2342] text-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-[#C8A24C] uppercase tracking-[0.25em] text-base font-semibold mb-3">
+              Quienes lo hacen posible
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Nuestro equipo
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: "Mtra. Ana Guadalupe Ballinas Aguilar",
+                role: "Fundadora",
+                description: "Impulsora principal del proyecto y compromiso social desde 2014.",
+              },
+              {
+                name: "Milagros Ramírez Ballinas",
+                role: "Coordinación de Desarrollo",
+                description: "Gestión de plataformas digitales e iniciativas tecnológicas.",
+              },
+              {
+                name: "Nombre de integrante",
+                role: "Cargo / Área",
+                description: "Descripción breve de la responsabilidad o contribución en la fundación.",
+              },
+              {
+                name: "Nombre de integrante",
+                role: "Cargo / Área",
+                description: "Descripción breve de la responsabilidad o contribución en la fundación.",
+              },
+            ].map((member, idx) => (
+              <div
+                key={idx}
+                className="bg-[#07182D] rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-[#C8A24C]/50 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-[#C8A24C]/20 border border-[#C8A24C] flex items-center justify-center mb-6 text-[#C8A24C] font-bold text-lg">
+                    {member.name.charAt(0)}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-1 text-white">{member.name}</h3>
+                  <p className="text-[#C8A24C] text-sm font-medium mb-3">{member.role}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{member.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* VALORES */}
       <section className="py-20 bg-[#F7F7F5] text-[#07182D]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
